@@ -4,7 +4,6 @@
   const navbar = document.getElementById("navbar");
   const navToggle = document.getElementById("nav-toggle");
   const navLinks = document.querySelectorAll(".nav-link");
-  const ctaForm = document.getElementById("cta-form");
 
   // ----- Navbar scroll state -----
   function updateNavbar() {
@@ -24,7 +23,7 @@
     "about",
     "features",
     "how-it-works",
-    "compete",
+    "levels",
     "cta",
   ];
 
@@ -93,15 +92,4 @@
     observer.observe(el);
   });
 
-  // ----- CTA form (no backend; prevent default and show feedback) -----
-  if (ctaForm) {
-    ctaForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-      const input = ctaForm.querySelector('input[type="email"]');
-      if (input && input.value.trim()) {
-        input.value = "";
-        input.placeholder = "You're on the list!";
-      }
-    });
-  }
 })();
