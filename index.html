@@ -276,12 +276,31 @@
             <h2>Get early access to LLMQuests</h2>
             <p>
               We're building the training and evaluation platform for reliable AI
-              systems. The product is still in development — drop us an email to request early access
-              to be among the first to try it.
+              systems. The product is still in development — leave your email to be among the first to try it.
             </p>
-            <a href="mailto:hello@llmquests.com" class="btn btn-primary"
-              >hello@llmquests.com</a
-            >
+            <div class="cta-form-wrap" id="cta-form-wrap">
+              <form class="cta-form" id="cta-form" aria-live="polite">
+                <input
+                  type="email"
+                  name="email"
+                  id="cta-email"
+                  placeholder="you@company.com"
+                  required
+                  autocomplete="email"
+                  aria-label="Email address"
+                />
+                <button type="submit" class="btn btn-primary" id="cta-submit">
+                  <span class="cta-btn-text">Request early access</span>
+                  <span class="cta-btn-spinner" aria-hidden="true"></span>
+                </button>
+              </form>
+              <p class="cta-note">Free to start. No credit card required.</p>
+            </div>
+            <div class="cta-success" id="cta-success" hidden>
+              <span class="cta-success-icon" aria-hidden="true">✓</span>
+              <p class="cta-success-title">You're on the list</p>
+              <p class="cta-success-text">We'll be in touch when early access opens. Check your inbox (and spam) for updates.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -307,6 +326,7 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Early access form submits to Next.js POST /api/early-access. To use a different origin, set data-api-base on the script tag (e.g. data-api-base="https://app.llmquests.com"). -->
+    <script src="script.js" id="early-access-script"></script>
   </body>
 </html>
