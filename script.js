@@ -100,12 +100,13 @@
 
   const ctaFormWrap = document.getElementById("cta-form-wrap");
 
-  // API base: same origin when served from this app (e.g. /landing/). Override via data-api-base on the script tag.
+  // API base: same origin when served from this app. Set data-api-base on the script tag to the origin where /api/early-access lives (e.g. https://app.llmquests.com).
   var EARLY_ACCESS_API_BASE = (function () {
     var script =
       document.getElementById("early-access-script") ||
       document.querySelector("script[src*='script.js']");
-    return (script && script.getAttribute("data-api-base")) || "";
+    var base = (script && script.getAttribute("data-api-base")) || "";
+    return base ? base.replace(/\/$/, "") : "";
   })();
 
   /**
@@ -113,8 +114,8 @@
    * @param {string} email - User's email address
    */
   function submitEarlyAccessEmail(email) {
-    var url =
-      (EARLY_ACCESS_API_BASE || window.location.origin) + "/api/early-access";
+    var origin = EARLY_ACCESS_API_BASE || window.location.origin;
+    var url = origin.replace(/\/$/, "") + "/api/early-access";
     fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/json" },

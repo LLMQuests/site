@@ -376,7 +376,7 @@
       </div>
     </footer>
 
-    <!-- Early access form submits to Next.js POST /api/early-access. Same origin when served from this app (e.g. /landing/). -->
-    <script src="script.js" id="early-access-script"></script>
+    <!-- Early access form: set data-api-base to the origin where /api/early-access lives (e.g. https://app.llmquests.com). Omit for same-origin. -->
+    <script src="script.js" id="early-access-script" data-api-base="https://app.llmquests.com"></script>
   </body>
 </html>
