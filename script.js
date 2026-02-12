@@ -100,9 +100,11 @@
 
   const ctaFormWrap = document.getElementById("cta-form-wrap");
 
-  // API base for early-access: same origin by default. Override via data-api-base on the script tag (e.g. <script src="script.js" data-api-base="https://app.llmquests.com">).
+  // API base: same origin when served from this app (e.g. /landing/). Override via data-api-base on the script tag.
   var EARLY_ACCESS_API_BASE = (function () {
-    var script = document.getElementById("early-access-script") || document.querySelector("script[src*='script.js']");
+    var script =
+      document.getElementById("early-access-script") ||
+      document.querySelector("script[src*='script.js']");
     return (script && script.getAttribute("data-api-base")) || "";
   })();
 
@@ -112,19 +114,23 @@
    * @returns {Promise<void>}
    */
   function submitEarlyAccessEmail(email) {
-    var url = (EARLY_ACCESS_API_BASE || window.location.origin) + "/api/early-access";
+    var url =
+      (EARLY_ACCESS_API_BASE || window.location.origin) + "/api/early-access";
     return fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email: email, source: "landing" }),
     }).then(function (res) {
       if (!res.ok) {
-        return res.json().then(function (data) {
-          var msg = (data && data.error) ? data.error : "Something went wrong.";
-          throw new Error(msg);
-        }).catch(function () {
-          throw new Error("Something went wrong. Please try again.");
-        });
+        return res
+          .json()
+          .then(function (data) {
+            var msg = data && data.error ? data.error : "Something went wrong.";
+            throw new Error(msg);
+          })
+          .catch(function () {
+            throw new Error("Something went wrong. Please try again.");
+          });
       }
     });
   }
@@ -157,7 +163,10 @@
             ctaSubmit.classList.remove("cta-btn-loading");
           }
           if (ctaEmail) ctaEmail.disabled = false;
-          var message = (err && err.message) ? err.message : "Something went wrong. Please try again or email us at hello@llmquests.com.";
+          var message =
+            err && err.message
+              ? err.message
+              : "Something went wrong. Please try again or email us at hello@llmquests.com.";
           alert(message);
         })
         .then(function () {
@@ -169,5 +178,4 @@
         });
     });
   }
-
 })();
