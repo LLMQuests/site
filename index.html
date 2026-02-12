@@ -13,10 +13,57 @@
     <link rel="icon" href="logo.ico" type="image/x-icon" />
     <link rel="stylesheet" href="styles.css" />
     <script>
-      !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group identify setPersonProperties setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags resetGroups onFeatureFlags addFeatureFlagsHandler onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-      posthog.init('phc_yfdbAneyVEWYfajjqokUbWcEDJNGYVrqUTkMcZDR9pC', {
-        api_host: 'https://us.i.posthog.com',
-        defaults: '2026-01-30'
+      !(function (t, e) {
+        var o, n, p, r;
+        e.__SV ||
+          ((window.posthog = e),
+          (e._i = []),
+          (e.init = function (i, s, a) {
+            function g(t, e) {
+              var o = e.split(".");
+              2 == o.length && ((t = t[o[0]]), (e = o[1])),
+                (t[e] = function () {
+                  t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+                });
+            }
+            ((p = t.createElement("script")).type = "text/javascript"),
+              (p.async = !0),
+              (p.src =
+                s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") +
+                "/static/array.js"),
+              (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(
+                p,
+                r
+              );
+            var u = e;
+            for (
+              void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
+                u.people = u.people || [],
+                u.toString = function (t) {
+                  var e = "posthog";
+                  return (
+                    "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e
+                  );
+                },
+                u.people.toString = function () {
+                  return u.toString(1) + ".people (stub)";
+                },
+                o =
+                  "init capture register register_once register_for_session unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group identify setPersonProperties setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags resetGroups onFeatureFlags addFeatureFlagsHandler onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep".split(
+                    " "
+                  ),
+                n = 0;
+              n < o.length;
+              n++
+            )
+              g(u, o[n]);
+            e._i.push([i, s, a]);
+          }),
+          (e.__SV = 1));
+      })(document, window.posthog || []);
+      posthog.init("phc_yfdbAneyVEWYfajjqokUbWcEDJNGYVrqUTkMcZDR9pC", {
+        api_host: "https://us.i.posthog.com",
+        defaults: "2026-01-30",
       });
     </script>
   </head>
@@ -110,8 +157,8 @@
               <div class="about-icon">&#128200;</div>
               <h3>Task-level challenges</h3>
               <p>
-                Not toy prompts — real tasks like extracting structured data from
-                noisy inputs, configuring RAG pipelines, and designing
+                Not toy prompts — real tasks like extracting structured data
+                from noisy inputs, configuring RAG pipelines, and designing
                 multi-step agents.
               </p>
             </div>
@@ -154,9 +201,8 @@
               <div class="feature-number">04</div>
               <h3>Custom challenges & metrics</h3>
               <p>
-                Create your own challenges with custom evaluation metrics.
-                Build challenge sets for your team or share them with the
-                community.
+                Create your own challenges with custom evaluation metrics. Build
+                challenge sets for your team or share them with the community.
               </p>
             </div>
           </div>
@@ -275,8 +321,9 @@
           <div class="cta-box animate-on-scroll">
             <h2>Get early access to LLMQuests</h2>
             <p>
-              We're building the training and evaluation platform for reliable AI
-              systems. The product is still in development — leave your email to be among the first to try it.
+              We're building the training and evaluation platform for reliable
+              AI systems. The product is still in development — leave your email
+              to be among the first to try it.
             </p>
             <div class="cta-form-wrap" id="cta-form-wrap">
               <form class="cta-form" id="cta-form" aria-live="polite">
@@ -299,7 +346,10 @@
             <div class="cta-success" id="cta-success" hidden>
               <span class="cta-success-icon" aria-hidden="true">✓</span>
               <p class="cta-success-title">You're on the list</p>
-              <p class="cta-success-text">We'll be in touch when early access opens. Check your inbox (and spam) for updates.</p>
+              <p class="cta-success-text">
+                We'll be in touch when early access opens. Check your inbox (and
+                spam) for updates.
+              </p>
             </div>
           </div>
         </div>
@@ -326,7 +376,7 @@
       </div>
     </footer>
 
-    <!-- Early access form submits to Next.js POST /api/early-access. To use a different origin, set data-api-base on the script tag (e.g. data-api-base="https://app.llmquests.com"). -->
+    <!-- Early access form submits to Next.js POST /api/early-access. Same origin when served from this app (e.g. /landing/). -->
     <script src="script.js" id="early-access-script"></script>
   </body>
 </html>
