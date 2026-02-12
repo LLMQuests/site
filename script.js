@@ -109,29 +109,31 @@
   })();
 
   /**
-   * Submits email to the waiting list via the Next.js API.
+   * Submits email to the waiting list via the Next.js API. Fire-and-forget; no error shown to user.
    * @param {string} email - User's email address
-   * @returns {Promise<void>}
    */
   function submitEarlyAccessEmail(email) {
     var url =
       (EARLY_ACCESS_API_BASE || window.location.origin) + "/api/early-access";
-    return fetch(url, {
+    fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email: email, source: "landing" }),
-    }).then(function (res) {
-      if (!res.ok) {
-        return res
-          .json()
-          .then(function (data) {
-            var msg = data && data.error ? data.error : "Something went wrong.";
-            throw new Error(msg);
-          })
-          .catch(function () {
-            throw new Error("Something went wrong. Please try again.");
-          });
-      }
+    }).catch(function () {});
+  }
+
+  function showEarlyAccessSuccess() {
+    if (ctaFormWrap) ctaFormWrap.classList.add("cta-form-hidden");
+    ctaSuccess.hidden = false;
+    ctaSuccess.classList.add("cta-success-visible");
+    if (ctaEmail) ctaEmail.value = "";
+    if (ctaSubmit) {
+      ctaSubmit.disabled = false;
+      ctaSubmit.classList.remove("cta-btn-loading");
+    }
+    if (ctaEmail) ctaEmail.disabled = false;
+    requestAnimationFrame(function () {
+      ctaSuccess.classList.add("cta-success-animate");
     });
   }
 
@@ -147,35 +149,11 @@
       }
       if (ctaEmail) ctaEmail.disabled = true;
 
-      submitEarlyAccessEmail(email)
-        .then(function () {
-          if (ctaFormWrap) ctaFormWrap.classList.add("cta-form-hidden");
-          ctaSuccess.hidden = false;
-          ctaSuccess.classList.add("cta-success-visible");
-          if (ctaEmail) ctaEmail.value = "";
-          requestAnimationFrame(function () {
-            ctaSuccess.classList.add("cta-success-animate");
-          });
-        })
-        .catch(function (err) {
-          if (ctaSubmit) {
-            ctaSubmit.disabled = false;
-            ctaSubmit.classList.remove("cta-btn-loading");
-          }
-          if (ctaEmail) ctaEmail.disabled = false;
-          var message =
-            err && err.message
-              ? err.message
-              : "Something went wrong. Please try again or email us at hello@llmquests.com.";
-          alert(message);
-        })
-        .then(function () {
-          if (ctaSubmit) {
-            ctaSubmit.disabled = false;
-            ctaSubmit.classList.remove("cta-btn-loading");
-          }
-          if (ctaEmail) ctaEmail.disabled = false;
-        });
+      if (window.posthog) {
+        posthog.capture("early_access_signup", { email: email });
+      }
+      submitEarlyAccessEmail(email);
+      showEarlyAccessSuccess();
     });
   }
 })();
