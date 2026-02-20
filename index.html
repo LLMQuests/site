@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LLMQuests – Train & Evaluate Your AI Skills</title>
+    <title>LLMQuests – Benchmarking production AI engineers</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,268 +13,235 @@
     <link rel="icon" href="logo.ico" type="image/x-icon" />
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
     <div class="gradient-orb gradient-orb-1" aria-hidden="true"></div>
     <div class="gradient-orb gradient-orb-2" aria-hidden="true"></div>
     <div class="gradient-orb gradient-orb-3" aria-hidden="true"></div>
     <div class="grid-overlay" aria-hidden="true"></div>
 
-    <header class="navbar" id="navbar">
+    <header class="navbar">
       <div class="nav-inner">
         <a href="#" class="logo">
           <img src="logo.ico" alt="LLMQuests logo" class="logo-icon" />
           <span class="logo-text">LLMQuests</span>
         </a>
         <nav class="nav-links">
-          <a href="#hero" class="nav-link">Home</a>
-          <a href="#about" class="nav-link">About</a>
+          <a href="#about" class="nav-link">Why</a>
           <a href="#features" class="nav-link">Features</a>
           <a href="#how-it-works" class="nav-link">How it works</a>
-          <a href="#levels" class="nav-link">Levels</a>
+          <a href="#levels" class="nav-link">Progression</a>
         </nav>
-        <button class="nav-toggle" aria-label="Open menu" id="nav-toggle">
-          <span></span><span></span><span></span>
-        </button>
       </div>
     </header>
 
     <main>
-      <section class="section hero" id="hero">
+      <!-- HERO -->
+      <section class="section hero">
         <div class="container">
-          <p class="hero-badge animate-fade-in">
-            Practice and Evaluate your real-world AI skills
+          <p class="hero-badge">
+            The benchmark for production-ready AI engineers
           </p>
+
           <h1 class="hero-title">
-            <span class="line">Practice building</span>
-            <span class="line highlight">reliable AI systems</span>
+            <span class="line">Measure</span>
+            <span class="line highlight">real-world AI engineering skill</span>
           </h1>
+
           <p class="hero-subtitle">
-            Sharpen your AI engineering skills through hands-on challenges with
-            hidden test cases, objective scoring, and leaderboards. From prompt
-            engineering to agent design — level up through real-world tasks.
+            Real-world challenges that simulate production: structured extraction,
+            hallucination mitigation, tool-calling reliability, RAG optimization,
+            and multi-step agent workflows. Hidden test cases. Measurable metrics.
+            Outcome-based evaluation - not learning content. Evaluation infrastructure.
           </p>
+
           <div class="hero-actions">
-            <a href="#cta" class="btn btn-primary">Request early access</a>
-            <a href="#how-it-works" class="btn btn-ghost">See how it works</a>
+            <a href="mailto:hello@llmquests.com" class="btn btn-primary">
+              Request Early Access
+            </a>
           </div>
-          <div class="hero-stats animate-float">
+
+          <div class="hero-stats">
             <div class="stat">
-              <span class="stat-value">Skills</span
-              ><span class="stat-label">Prompt engineering & more</span>
+              <span class="stat-value">Reliability</span>
+              <span class="stat-label">Deterministic evaluation</span>
             </div>
             <div class="stat">
-              <span class="stat-value">Challenges</span
-              ><span class="stat-label">Hidden test cases</span>
+              <span class="stat-value">Hidden Tests</span>
+              <span class="stat-label">No lucky runs</span>
             </div>
             <div class="stat">
-              <span class="stat-value">Leaderboards</span
-              ><span class="stat-label">Compete & rank up</span>
+              <span class="stat-value">Public Rank</span>
+              <span class="stat-label">Global benchmark</span>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- WHY -->
       <section class="section about" id="about">
         <div class="container">
           <h2 class="section-title">
-            <span class="section-label">About</span>
-            Why AI skills need real evaluation
+            There is no LeetCode for production AI
           </h2>
+
           <div class="about-grid">
-            <div class="about-card animate-on-scroll">
-              <div class="about-icon">&#9881;</div>
-              <h3>Outcomes, not vibes</h3>
+            <div class="about-card">
+              <h3>Measured, not subjective</h3>
               <p>
-                Your solutions are scored against hidden test sets with multiple
-                runs. We penalize verbosity, hallucinations, and inefficiency —
-                so only real engineering wins.
+                Every submission runs against hidden test sets across multiple
+                executions. We score accuracy, determinism, hallucination rate,
+                schema adherence, and cost efficiency. Engineering discipline -
+                not prompt tricks.
               </p>
             </div>
-            <div class="about-card animate-on-scroll">
-              <div class="about-icon">&#127942;</div>
-              <h3>A real hiring signal</h3>
+
+            <div class="about-card">
+              <h3>The missing evaluation layer</h3>
               <p>
-                Companies don't know how to assess AI skills today. Your
-                LLMQuests rank becomes a credible, objective measure of your
-                ability to build reliable AI systems.
+                Companies hire "AI engineers" based on resumes and vague
+                interviews. There is no standardized way to evaluate whether
+                someone can build reliable AI systems. We are that benchmark.
               </p>
             </div>
-            <div class="about-card animate-on-scroll">
-              <div class="about-icon">&#128200;</div>
-              <h3>Task-level challenges</h3>
+
+            <div class="about-card">
+              <h3>Production-level tasks</h3>
               <p>
-                Not toy prompts — real tasks like extracting structured data from
-                noisy inputs, configuring RAG pipelines, and designing
-                multi-step agents.
+                Structured extraction under noisy inputs. Tool-calling accuracy.
+                RAG optimization. Multi-step agent reliability. We simulate
+                real-world system tasks - and score the outcome.
               </p>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- FEATURES -->
       <section class="section features" id="features">
         <div class="container">
           <h2 class="section-title">
-            <span class="section-label">Features</span>
-            Everything you need to level up
+            Evaluation infrastructure, not content
           </h2>
+
           <div class="features-grid">
-            <div class="feature-card animate-on-scroll">
-              <div class="feature-number">01</div>
-              <h3>Hidden test cases</h3>
+            <div class="feature-card">
+              <h3>Hidden multi-run evaluation</h3>
               <p>
-                Your solution is evaluated against test cases you never see.
-                Multiple runs ensure consistency — no lucky one-offs.
+                Submissions run against unseen test cases and multiple runs.
+                We measure consistency and repeatability - not one-off success.
               </p>
             </div>
-            <div class="feature-card animate-on-scroll">
-              <div class="feature-number">02</div>
-              <h3>Submit & get scored</h3>
+
+            <div class="feature-card">
+              <h3>Objective reliability scoring</h3>
               <p>
-                Write your solution, submit it, and get instant, objective
-                scores. See exactly where you stand with detailed breakdowns.
+                Detailed breakdowns: accuracy, hallucination rate, schema
+                adherence, token efficiency, and determinism. Defined metrics,
+                standardized benchmark.
               </p>
             </div>
-            <div class="feature-card animate-on-scroll">
-              <div class="feature-number">03</div>
-              <h3>Global leaderboards</h3>
+
+            <div class="feature-card">
+              <h3>Global benchmark rankings</h3>
               <p>
-                Compete per skill and per challenge. Climb the ranks, earn your
-                position, and prove your AI engineering abilities.
+                See how you rank among AI engineers worldwide. Public benchmark
+                profile, percentile, skill progression, and reliability score.
               </p>
             </div>
-            <div class="feature-card animate-on-scroll">
-              <div class="feature-number">04</div>
-              <h3>Custom challenges & metrics</h3>
+
+            <div class="feature-card">
+              <h3>Team & hiring assessments</h3>
               <p>
-                Create your own challenges with custom evaluation metrics.
-                Build challenge sets for your team or share them with the
-                community.
+                Enterprise: private challenge sets, team benchmarking dashboards,
+                hiring assessment workflows. Use LLMQuests as a trusted signal
+                for production AI capability.
               </p>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- HOW IT WORKS -->
       <section class="section how-it-works" id="how-it-works">
         <div class="container">
           <h2 class="section-title">
-            <span class="section-label">How it works</span>
-            Pick a skill, solve challenges, climb the ranks
+            How benchmarking works
           </h2>
+
           <div class="steps">
-            <div class="step animate-on-scroll">
-              <div class="step-marker">1</div>
-              <div class="step-content">
-                <h3>Choose a skill</h3>
-                <p>
-                  Start with prompt engineering or explore other AI skills as
-                  they become available. Each skill has a structured set of
-                  challenges.
-                </p>
-              </div>
+            <div class="step">
+              <h3>Select a production domain</h3>
+              <p>
+                Structured extraction, hallucination mitigation, tool/function
+                calling, RAG optimization, or multi-step agent workflows.
+              </p>
             </div>
-            <div class="step animate-on-scroll">
-              <div class="step-marker">2</div>
-              <div class="step-content">
-                <h3>Tackle challenges</h3>
-                <p>
-                  Each challenge has a clear goal, constraints, and evaluation
-                  criteria. Design your solution to handle diverse, unseen
-                  inputs.
-                </p>
-              </div>
+
+            <div class="step">
+              <h3>Design your solution</h3>
+              <p>
+                Build prompts, workflows, or system instructions that satisfy
+                strict production constraints and real-world scenarios.
+              </p>
             </div>
-            <div class="step animate-on-scroll">
-              <div class="step-marker">3</div>
-              <div class="step-content">
-                <h3>Submit & get scored</h3>
-                <p>
-                  Your solution runs against hidden test cases across multiple
-                  runs. Scoring penalizes hallucinations, verbosity, and
-                  inefficiency.
-                </p>
-              </div>
+
+            <div class="step">
+              <h3>Run against hidden tests</h3>
+              <p>
+                Your submission runs against hidden test sets. We score across
+                defined metrics so the benchmark is standardized and repeatable.
+              </p>
             </div>
-            <div class="step animate-on-scroll">
-              <div class="step-marker">4</div>
-              <div class="step-content">
-                <h3>Iterate & climb</h3>
-                <p>
-                  Refine your approach, resubmit, and watch your rank rise on
-                  the leaderboard. Progress from single prompts to multi-step
-                  agent design.
-                </p>
-              </div>
+
+            <div class="step">
+              <h3>Benchmark & iterate</h3>
+              <p>
+                Improve reliability, reduce hallucinations, optimize cost. Climb
+                the global rankings and build a trusted benchmark profile.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- PROGRESSION -->
       <section class="section compete" id="levels">
         <div class="container">
           <h2 class="section-title">
-            <span class="section-label">Progression</span>
-            From single prompts to agent design
+            From prompt tasks to full system reliability
           </h2>
-          <div class="compete-content animate-on-scroll">
-            <div class="compete-visual">
-              <div class="terminal-mock">
-                <div class="terminal-header">
-                  <span class="terminal-dot"></span>
-                  <span class="terminal-dot"></span>
-                  <span class="terminal-dot"></span>
-                  <span class="terminal-title"
-                    >Challenge: Extract Structured Data</span
-                  >
-                </div>
-                <div class="terminal-body">
-                  <code
-                    ><span class="teal">Task:</span> Extract all entities from
-                    20 noisy inputs</code
-                  >
-                  <code
-                    ><span class="teal">Constraints:</span> &lt;200 tokens,
-                    deterministic output</code
-                  >
-                  <code
-                    ><span class="muted"
-                      >→ Score: 94/100 · Rank #12 · 18/20 test cases
-                      passed</span
-                    ></code
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="compete-text">
-              <p>
-                Challenges evolve with the AI ecosystem. Start with foundational
-                skills and work your way up to production-grade system design.
-              </p>
-              <ul class="compete-list">
-                <li>Level 1: Single prompt tasks</li>
-                <li>Level 2: Prompt + few-shot examples</li>
-                <li>Level 3: Prompt + tool calling</li>
-                <li>Level 4: RAG configuration</li>
-                <li>Level 5: Multi-step agent design</li>
-              </ul>
-            </div>
-          </div>
+
+          <p style="text-align:center; max-width:700px; margin:0 auto 40px;">
+            AI engineering is becoming a formal discipline, but it lacks
+            standardized evaluation. We are building the benchmark layer for
+            applied AI systems - from prompt design to production-grade
+            multi-step architecture.
+          </p>
+
+          <ul class="compete-list">
+            <li>Level 1: Deterministic prompt design</li>
+            <li>Level 2: Structured extraction & schema control</li>
+            <li>Level 3: Tool/function calling reliability</li>
+            <li>Level 4: RAG grounding & citation accuracy</li>
+            <li>Level 5: Multi-step agent stability</li>
+          </ul>
         </div>
       </section>
 
-      <section class="section cta" id="cta">
+      <!-- CTA -->
+      <section class="section cta">
         <div class="container">
-          <div class="cta-box animate-on-scroll">
-            <h2>Get early access to LLMQuests</h2>
+          <div class="cta-box">
+            <h2>Join the benchmark</h2>
             <p>
-              We're building the training and evaluation platform for reliable AI
-              systems. The product is still in development — drop us an email to request early access
-              to be among the first to try it.
+              We are building the trusted benchmark for AI engineering talent -
+              the evaluation infrastructure for production-ready AI systems.
+              Join early and define the standard.
             </p>
-            <a href="mailto:hello@llmquests.com" class="btn btn-primary"
-              >hello@llmquests.com</a
-            >
+            <a href="mailto:hello@llmquests.com" class="btn btn-primary">
+              Request Early Access
+            </a>
           </div>
         </div>
       </section>
@@ -282,21 +249,7 @@
 
     <footer class="footer">
       <div class="container">
-        <div class="footer-top">
-          <a href="#" class="logo">
-            <span class="logo-icon">&lt;/&gt;</span>
-            <span class="logo-text">LLMQuests</span>
-          </a>
-          <nav class="footer-links">
-            <a href="#about">About</a>
-            <a href="#features">Features</a>
-            <a href="#how-it-works">How it works</a>
-            <a href="#levels">Levels</a>
-          </nav>
-        </div>
-        <div class="footer-bottom">
-          <p>&copy; 2026 LLMQuests. Train. Evaluate. Build reliable AI.</p>
-        </div>
+        <p>&copy; 2026 LLMQuests. Benchmark. Evaluate. Build reliable AI.</p>
       </div>
     </footer>
 
