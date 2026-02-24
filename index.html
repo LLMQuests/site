@@ -62,7 +62,8 @@
           (e.__SV = 1));
       })(document, window.posthog || []);
       posthog.init("phc_yfdbAneyVEWYfajjqokUbWcEDJNGYVrqUTkMcZDR9pC", {
-        api_host: "https://us.i.posthog.com",
+        api_host: "https://app.llmquests.com/p",
+        cookie_domain: ".llmquests.com",
         defaults: "2026-01-30",
       });
     </script>
@@ -377,6 +378,10 @@
     </footer>
 
     <!-- Early access form: set data-api-base to the origin where /api/early-access lives (e.g. https://app.llmquests.com). Omit for same-origin. -->
-    <script src="script.js" id="early-access-script" data-api-base="https://app.llmquests.com"></script>
+    <script
+      src="script.js"
+      id="early-access-script"
+      data-api-base="https://app.llmquests.com"
+    ></script>
   </body>
 </html>
